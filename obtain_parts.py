@@ -3,10 +3,10 @@ import numpy as np
 import json
 import requests
 
-"""
+def select_parts():
+    """
     Provides info about which parts are going to be submitted for
     Arg 1: PartGUID(s) (list)
-    Arg 2: SupplierGUID(s) (list)
 
     return: dict "submission"
 
@@ -37,13 +37,11 @@ import requests
       }
 
     """
-
-
-def get_parts():
+    # TODO: WORK ON DATAFRAME
 
     # create a pandas data frame from a csv file
-
     df = pd.read_csv("C:/Users/FaithMu/Downloads/test.csv", dtype=str)
+    # TODO: You will get the dataframe as an input argument. The dataframe will contain two columns: "Supplier_GUID" and "Part_GUID". Make sure to rework the function to work with this input.
 
     # create the submission dictionary
     submission = {}
@@ -66,5 +64,4 @@ def get_parts():
     return submission
 
 
-submission1 = get_parts()
-print(submission1)
+select_parts()
